@@ -10,21 +10,32 @@ namespace Metro.Controllers
     {
         public ActionResult Index()
         {
+            
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Government()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        //public ActionResult Contact()
-        //{
-        //    ViewBag.Message = "Your contact page.";
+        public ActionResult Geography()
+        {
+            return View();
+        }
 
-        //    return View();
-        //}
+        public ActionResult Economics()
+        {
+            return View();
+        }
+
+        public ActionResult Army()
+        {
+            return View();
+        }
+        public ActionResult Admin()
+        {
+            return View();
+        }
     }
 }

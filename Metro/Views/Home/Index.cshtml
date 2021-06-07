@@ -1,65 +1,59 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/css/style.css">
+    @Styles.Render("~/Content/css")
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>Metro 2033</title>
+    <title>Метро 2033</title>
 </head>
 <body>
 
     <header class="header">
         <div class="container">
             <div class="header_inner">
-                <div class="header_logo">Метро 2033</div>
+
+                <div class="header_logo"><a class="nav_link" href="#start">Метро 2033</a></div>
+
                 <nav class="nav">
-                    <a class="nav_link" href="#">Service</a>
-                    <a class="nav_link" href="#">Work</a>
-                    <a class="nav_link" href="#">gallery</a>
-                    <a class="nav_link" href="#">Contact</a>
+                    <a class="nav_link" href="#statistics">Статистика</a>
+                    <a class="nav_link" href="#about">Описання</a>
+                    <a class="nav_link" href="#gallery">Галерея</a>
+                    <a class="nav_link" href="#contacts">Контакти</a>
                 </nav>
+
+            </div>
+            <div class="scroll">
+                <h2>Прогрес</h2>
+                <div class="progress-container">
+                    <div class="progress-bar" id="myBar"></div>
+                </div>
             </div>
         </div>
+
+
+
+
     </header>
-    <div class="intro">
+    <div class="intro" id="start">
         <div class="container">
             <div class="intro_inner">
                 <h2 class="intro_suptitle">Вітаємо у державі</h2>
                 <h1 class="intro_title">Червонa Лінія</h1>
 
-                <a class="btn" href="#">Побачити більше</a>
+                <a class="btn" href="Admin.html">Додати дані</a>
             </div>
+
 
         </div>
 
-        <div class="slider">
-            <div class="container">
-                <div class="slider_inner">
-                    <div class="slider_item active">
-                        <span class="slider_num"></span>
-                        Intro
-                    </div>
-                    <div class="slider_item">
-                        <span class="slider_num"></span>
-                        Work
-                    </div>
-                    <div class="slider_item">
-                        <span class="slider_num"></span>
-                        About
-                    </div>
-                    <div class="slider_item">
-                        <span class="slider_num"></span>
-                        Contacts
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 
-    <div class="statistics">
+    <div class="statistics" id="statistics">
         <div class="container">
             <div class="stat">
                 <div class="stat_item">
@@ -84,7 +78,7 @@
 
     </div>
 
-    <section class="section">
+    <section class="section" id="about">
         <div class="container">
             <div class="section_header">
                 <h3 class="section_suptitle">Характеристики</h3>
@@ -99,30 +93,30 @@
                 </div>
             </div>
             <div class="about">
-                <div class="about_item">
+               <a class="about_item" href='/home/government'>
                     <div class="about_image">
-                        <img src="assets/images/Governance.jpg" width="280" height="200" alt="">
+                        <img src="@Url.Content("~/Content/images/Governance.jpg")" width="280" height="200" alt="">
                     </div>
                     <div class="about_text">Влада</div>
-                </div>
-                <div class="about_item">
+                </a>
+                <a class="about_item" href='/home/geography'>
                     <div class="about_image">
-                        <img src="assets/images/Geography.jpg" width="280" height="200" alt="">
+                        <img src="@Url.Content("~/Content/images/Geography.jpg")" width="280" height="200" alt="">
                     </div>
                     <div class="about_text">Географія</div>
-                </div>
-                <div class="about_item">
+                </a>
+                <a class="about_item" href='/home/army'>
                     <div class="about_image">
-                        <img src="assets/images/Army.jpg" width="280" height="200" alt="">
+                        <img src="@Url.Content("~/Content/images/Army.jpg")"  width="280" height="200" alt="">
                     </div>
                     <div class="about_text">Армія</div>
-                </div>
-                <div class="about_item">
+                </a>
+                <a class="about_item" href='/home/economics'>
                     <div class="about_image">
-                        <img src="assets/images/Economics.jpg" width="280" height="200" alt="">
+                        <img src="@Url.Content("~/Content/images/Economics.jpg")" width="280" height="200" alt="">
                     </div>
                     <div class="about_text">Економіка</div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -174,7 +168,7 @@
 
 
 
-    <section class="section_2">
+    <section class="section_2" id="gallery">
         <div class="container">
             <div class="section_2_header">
                 <h2 class="section_2_title">Галерея</h2>
@@ -186,8 +180,8 @@
                         <div class="photo">
 
 
-                            <a href="assets/images/Gallery/Army_shop.jpg" target="_blank">
-                                <img style="border: 0px solid ; width: 320px; height: 280px;" alt="" src="assets/images/Gallery/Army_shop.jpg">
+                            <a href="@Url.Content("~/Content/images/Gallery/Army_shop.jpg")" target="_blank">
+                                <img style="border: 0px solid ; width: 320px; height: 280px;" alt="" src="@Url.Content("~/Content/images/Gallery/Army_shop.jpg")">
                             </a>
 
 
@@ -196,22 +190,24 @@
                     </div>
                     <div class="gallery_item">
                         <div class="photo">
-                            <a class="thumbnail" href="assets/images/Gallery/blockpost.jpg">
-                                <img style="width:320px; height:280px;"
-                                     src="assets/images/Gallery/blockpost.jpg">
-                                <span>Блокпост<img style="width: 800px; height: 800px;" src="assets/images/Gallery/blockpost.jpg"></span>
+
+
+                            <a href="@Url.Content("~/Content/images/Gallery/blockpost.jpg")" target="_blank">
+                                <img style="border: 0px solid ; width: 320px; height: 280px;" alt="" src="@Url.Content("~/Content/images/Gallery/blockpost.jpg")" >
                             </a>
+
 
                             <div class="photo_text">Блокпост</div>
                         </div>
                     </div>
                     <div class="gallery_item">
                         <div class="photo">
-                            <a class="thumbnail" href="assets/images/Gallery/Drezines.jpg">
-                                <img style="width:320px; height:280px;"
-                                     src="assets/images/Gallery/Drezines.jpg">
-                                <span>Бойові дрезини<img style="width: 800px; height: 800px;" src="assets/images/Gallery/Drezines.jpg"></span>
+
+
+                            <a href="@Url.Content("~/Content/images/Gallery/Drezines.jpg")" target="_blank">
+                                <img style="border: 0px solid ; width: 320px; height: 280px;" alt="" src="@Url.Content("~/Content/images/Gallery/Drezines.jpg")" >
                             </a>
+
 
                             <div class="photo_text">Бойові дрезини</div>
                         </div>
@@ -220,70 +216,76 @@
                 <div class="2">
                     <div class="gallery_item">
                         <div class="photo">
-                            <a class="thumbnail" href="assets/images/Gallery/Tank.jpg">
-                                <img style="width:320px; height:280px;"
-                                     src="assets/images/Gallery/Tank.jpg">
-                                <span>Танк Червоної лінії<img style="width: 800px; height: 800px;" src="assets/images/Gallery/Tank.jpg"></span>
+
+
+                            <a href="@Url.Content("~/Content/images/Gallery/Tribune.jpg")"  target="_blank">
+                                <img style="border: 0px solid ; width: 320px; height: 280px;" alt="" src= "@Url.Content("~/Content/images/Gallery/Tribune.jpg")" >
                             </a>
 
-                            <div class="photo_text">Танк Червоної лінії</div>
-                        </div>
-                    </div>
-                    <div class="gallery_item">
-                        <div class="photo">
-                            <a class="thumbnail" href="assets/images/Gallery/Sclad.jpg">
-                                <img style="width:320px; height:280px;"
-                                     src="assets/images/Gallery/Sclad.jpg">
-                                <span>Склад боєприпасів<img style="width: 800px; height: 800px;" src="assets/images/Gallery/Sclad.jpg"></span>
-                            </a>
-
-                            <div class="photo_text">Склад боєприпасів</div>
-                        </div>
-                    </div>
-                    <div class="gallery_item">
-                        <div class="photo">
-                            <a class="thumbnail" href="assets/images/Gallery/Sherengy.jpg">
-                                <img style="width:320px; height:280px;"
-                                     src="assets/images/Gallery/Sherengy.jpg">
-                                <span>Військові шеренги<img style="width: 800px; height: 800px;" src="assets/images/Gallery/Sherengy.jpg"></span>
-                            </a>
-
-                            <div class="photo_text">Військові шеренги</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="3">
-                    <div class="gallery_item">
-                        <div class="photo">
-                            <a class="thumbnail" href="assets/images/Gallery/Soldier.jpg">
-                                <img style="width:320px; height:280px;"
-                                     src="assets/images/Gallery/Soldier.jpg">
-                                <span>Солдат армії Червоної лінії<img style="width: 800px; height: 800px;" src="assets/images/Gallery/Soldier.jpg"></span>
-                            </a>
-
-                            <div class="photo_text">Солдат армії Червоної лінії</div>
-                        </div>
-                    </div>
-                    <div class="gallery_item">
-                        <div class="photo">
-                            <a class="thumbnail" href="assets/images/Gallery/Tribune.jpg">
-                                <img style="width:320px; height:280px;"
-                                     src="assets/images/Gallery/Tribune.jpg">
-                                <span>Трибуна Генерального Секретаря<img style="width: 800px; height: 800px;" src="assets/images/Gallery/Tribune.jpg"></span>
-                            </a>
 
                             <div class="photo_text">Трибуна Генерального Секретаря</div>
                         </div>
                     </div>
                     <div class="gallery_item">
                         <div class="photo">
-                            <a class="thumbnail" href="assets/images/Gallery/Soldiers.jpg">
-                                <img style="width:320px; height:280px;"
-                                     src="assets/images/Gallery/Soldiers.jpg">
-                                <span>Пошиковані військові<img style="width: 800px; height: 800px;" src="assets/images/Gallery/Soldiers.jpg"></span>
+
+
+                            <a href="@Url.Content("~/Content/images/Gallery/Sclad.jpg")"  target="_blank">
+                                <img style="border: 0px solid ; width: 320px; height: 280px;" alt="" src="@Url.Content("~/Content/images/Gallery/Sclad.jpg")" >
                             </a>
 
-                            <div class="photo_text">Пошиковані військові</div>
+
+                            <div class="photo_text">Склад боєприпасів</div>
+                        </div>
+                    </div>
+                    <div class="gallery_item">
+                        <div class="photo">
+
+
+                            <a href="@Url.Content("~/Content/images/Gallery/Sherengy.jpg")"  target="_blank">
+                                <img style="border: 0px solid ; width: 320px; height: 280px;" alt="" src="@Url.Content("~/Content/images/Gallery/Sherengy.jpg")" >
+                            </a>
+
+
+                            <div class="photo_text">Шеренги військових</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="3">
+                    <div class="gallery_item">
+                        <div class="photo">
+
+
+                            <a href="@Url.Content("~/Content/images/Gallery/Soldier.jpg")"  target="_blank">
+                                <img style="border: 0px solid ; width: 320px; height: 280px;" alt="" src="@Url.Content("~/Content/images/Gallery/Soldier.jpg")" >
+                            </a>
+
+
+                            <div class="photo_text">Військовий Червоної лінії</div>
+                        </div>
+                    </div>
+                    <div class="gallery_item">
+                        <div class="photo">
+
+
+                            <a href="@Url.Content("~/Content/images/Gallery/Soldiers.jpg")"  target="_blank">
+                                <img style="border: 0px solid ; width: 320px; height: 280px;" alt="" src="@Url.Content("~/Content/images/Gallery/Soldiers.jpg")" >
+                            </a>
+
+
+                            <div class="photo_text">Військові на перроні</div>
+                        </div>
+                    </div>
+                    <div class="gallery_item">
+                        <div class="photo">
+
+
+                            <a href="@Url.Content("~/Content/images/Gallery/Tank.jpg")"  target="_blank">
+                                <img style="border: 0px solid ; width: 320px; height: 280px;" alt="" src="@Url.Content("~/Content/images/Gallery/Tank.jpg")" >
+                            </a>
+
+
+                            <div class="photo_text">Танк Червоної лінії</div>
                         </div>
                     </div>
 
@@ -293,6 +295,31 @@
         </div>
     </section>
 
+    <div class="contacts_1">
+        <div class="container">
+            <div class="section_2_header">
+                <h2 class="section_2_title">Контакти</h2>
+
+            </div>
+            <div class="contacts_inner">
+                <div class="contacts_item active">
+                    <span class="contact_num"></span>
+                    <input type="text" id="copyTarget" value="+380680994517">
+                    <button id="copyButton">Copy</button>
+                    <br><br>
+                    <input type="text" placeholder="Click here and press Ctrl-V to see clipboard contents">
+                </div>
+                <div class="contacts_item active">
+                    <span class="contact_num"></span>
+                    <input type="text" id="copyTarget" value="zh.yurakov@gmail.com">
+                    <button id="copyButton">Copy</button>
+                    <br><br>
+                    <input type="text" placeholder="Click here and press Ctrl-V to see clipboard contents">
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

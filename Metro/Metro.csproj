@@ -276,7 +276,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\css\style.css" />
     <Content Include="assets\images\Army.jpg" />
     <Content Include="assets\images\b.jpg" />
     <Content Include="assets\images\bacground.jpg" />
@@ -402,6 +401,8 @@
     <Content Include="Content\DataTables\images\sort_desc.png" />
     <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
     <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="Content\images\tank_kl.png" />
+    <Content Include="Content\roboto.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -484,7 +485,36 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Content\images\Army.jpg" />
+    <Content Include="Content\images\b.jpg" />
+    <Content Include="Content\images\bacground.jpg" />
+    <Content Include="Content\images\Bar.jpg" />
+    <Content Include="Content\images\Cash.jpg" />
+    <Content Include="Content\images\Economics.jpg" />
+    <Content Include="Content\images\Gallery\Army_shop.jpg" />
+    <Content Include="Content\images\Gallery\blockpost.jpg" />
+    <Content Include="Content\images\Gallery\Drezines.jpg" />
+    <Content Include="Content\images\Gallery\EscalatorsToTeatr.jpg" />
+    <Content Include="Content\images\Gallery\Revolution_Square.jpg" />
+    <Content Include="Content\images\Gallery\Sclad.jpg" />
+    <Content Include="Content\images\Gallery\Sherengy.jpg" />
+    <Content Include="Content\images\Gallery\Soldier.jpg" />
+    <Content Include="Content\images\Gallery\Soldiers.jpg" />
+    <Content Include="Content\images\Gallery\Tank.jpg" />
+    <Content Include="Content\images\Gallery\Tribune.jpg" />
+    <Content Include="Content\images\Geography.jpg" />
+    <Content Include="Content\images\Governance.jpg" />
+    <Content Include="Content\images\Government\AndrewMoskvin.jpg" />
+    <Content Include="Content\images\Government\Cheslav.jpg" />
+    <Content Include="Content\images\Government\MaximMoskvin.jpg" />
+    <Content Include="Content\images\hazard_suit.jpg" />
+    <Content Include="Content\images\heavytrain.jpg" />
+    <Content Include="Content\images\Market.jpg" />
+    <Content Include="Content\images\Market2.jpg" />
+    <Content Include="Content\images\Metro.jpg" />
+    <Content Include="Content\images\Metro2.jpg" />
+    <Content Include="Content\images\soldiers_army.jpg" />
+    <Content Include="Content\images\Tea.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -497,6 +527,11 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Admin.cshtml" />
+    <Content Include="Views\Home\Army.cshtml" />
+    <Content Include="Views\Home\Economics.cshtml" />
+    <Content Include="Views\Home\Geography.cshtml" />
+    <Content Include="Views\Home\Government.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
