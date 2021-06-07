@@ -1,0 +1,299 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Metro 2033</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header_inner">
+                <div class="header_logo">Метро 2033</div>
+                <nav class="nav">
+                    @Html.ActionLink("New Item", "About", "Home", routeValues: null, htmlAttributes: new { @class = "nav_link active" })
+                    <a class="nav_link" href="#">Service</a>
+                    <a class="nav_link" href="#">Work</a>
+                    <a class="nav_link" href="#">gallery</a>
+                    <a class="nav_link" href="#">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="intro">
+        <div class="container">
+            <div class="intro_inner">
+                <h2 class="intro_suptitle">Вітаємо у державі</h2>
+                <h1 class="intro_title">Червонa Лінія</h1>
+
+                <a class="btn" href="#">Побачити більше</a>
+            </div>
+
+        </div>
+
+        <div class="slider">
+            <div class="container">
+                <div class="slider_inner">
+                    <div class="slider_item active">
+                        <span class="slider_num"></span>
+                        Intro
+                    </div>
+                    <div class="slider_item">
+                        <span class="slider_num"></span>
+                        Work
+                    </div>
+                    <div class="slider_item">
+                        <span class="slider_num"></span>
+                        About
+                    </div>
+                    <div class="slider_item">
+                        <span class="slider_num"></span>
+                        Contacts
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="statistics">
+        <div class="container">
+            <div class="stat">
+                <div class="stat_item">
+                    <div class="stat_count">2021</div>
+                    <div class="stat_text">Дата формування</div>
+                </div>
+                <div class="stat_item">
+                    <div class="stat_count">17</div>
+                    <div class="stat_text">Кількість станцій</div>
+                </div>
+                <div class="stat_item">
+                    <div class="stat_count">15000</div>
+                    <div class="stat_text">Населення</div>
+                </div>
+                <div class="stat_item">
+                    <div class="stat_count">Площа революції</div>
+                    <div class="stat_text">Столиця</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="section_header">
+                <h3 class="section_suptitle">Характеристики</h3>
+                <h2 class="section_title">Описання</h2>
+                <div class="section_text">
+                    <p>
+                        Соціалістична держава, одна з наймогутніших в московському метро і займає майже цілу гілку. Основну частину населення складають колишні комсомольські діячі і ветерани, партійні функціонери, люпен та пролетаріат.
+                    </p>
+                    <p>
+                        Гасло комуністів: «ПРОЛЕТАРІЇ ВСІХ СТАНЦІЙ, ОБ'ДНУЙТЕСЬ!»
+                    </p>
+                </div>
+            </div>
+            <div class="about">
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="assets/images/Governance.jpg" width="280" height="200" alt="">
+                    </div>
+                    <div class="about_text">Влада</div>
+                </div>
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="assets/images/Geography.jpg" width="280" height="200" alt="">
+                    </div>
+                    <div class="about_text">Географія</div>
+                </div>
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="assets/images/Army.jpg" width="280" height="200" alt="">
+                    </div>
+                    <div class="about_text">Армія</div>
+                </div>
+                <div class="about_item">
+                    <div class="about_image">
+                        <img src="assets/images/Economics.jpg" width="280" height="200" alt="">
+                    </div>
+                    <div class="about_text">Економіка</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <style type="text/css">
+        .thumbnail {
+            position: relative;
+            z-index: 0;
+        }
+
+            .thumbnail:hover {
+                background-color: transparent;
+                z-index: 50;
+            }
+
+            .thumbnail span { /*CSS for enlarged image*/
+                position: absolute;
+                background-color: #3d3d3d;
+                padding: 5px;
+                left: -1000px;
+                border: 1px solid white;
+                visibility: hidden;
+                color: Yellow;
+                text-decoration: none;
+                border-radius: 4px 4px 4px 4px;
+                -moz-border-radius: 4px 4px 4px 4px;
+                -webkit-border-radius: 4px 4px 4px 4px;
+            }
+
+                .thumbnail span img { /*CSS for enlarged image*/
+                    border-width: 0;
+                    padding: 2px;
+                }
+
+            .thumbnail:hover span { /*CSS for enlarged image on hover*/
+                visibility: visible;
+                top: 0;
+                left: 60px; /*position where enlarged image should offset horizontally */
+            }
+    </style>
+
+
+
+
+
+
+    <section class="section_2">
+        <div class="container">
+            <div class="section_2_header">
+                <h2 class="section_2_title">Галерея</h2>
+
+            </div>
+            <div class="gallery">
+                <div class="1">
+                    <div class="gallery_item">
+                        <div class="photo">
+
+
+                            <a href="assets/images/Gallery/Army_shop.jpg" target="_blank">
+                                <img style="border: 0px solid ; width: 320px; height: 280px;" alt="" src="assets/images/Gallery/Army_shop.jpg">
+                            </a>
+
+
+                            <div class="photo_text">Військовий магазин</div>
+                        </div>
+                    </div>
+                    <div class="gallery_item">
+                        <div class="photo">
+                            <a class="thumbnail" href="assets/images/Gallery/blockpost.jpg">
+                                <img style="width:320px; height:280px;"
+                                     src="assets/images/Gallery/blockpost.jpg">
+                                <span>Блокпост<img style="width: 800px; height: 800px;" src="assets/images/Gallery/blockpost.jpg"></span>
+                            </a>
+
+                            <div class="photo_text">Блокпост</div>
+                        </div>
+                    </div>
+                    <div class="gallery_item">
+                        <div class="photo">
+                            <a class="thumbnail" href="assets/images/Gallery/Drezines.jpg">
+                                <img style="width:320px; height:280px;"
+                                     src="assets/images/Gallery/Drezines.jpg">
+                                <span>Бойові дрезини<img style="width: 800px; height: 800px;" src="assets/images/Gallery/Drezines.jpg"></span>
+                            </a>
+
+                            <div class="photo_text">Бойові дрезини</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="2">
+                    <div class="gallery_item">
+                        <div class="photo">
+                            <a class="thumbnail" href="assets/images/Gallery/Tank.jpg">
+                                <img style="width:320px; height:280px;"
+                                     src="assets/images/Gallery/Tank.jpg">
+                                <span>Танк Червоної лінії<img style="width: 800px; height: 800px;" src="assets/images/Gallery/Tank.jpg"></span>
+                            </a>
+
+                            <div class="photo_text">Танк Червоної лінії</div>
+                        </div>
+                    </div>
+                    <div class="gallery_item">
+                        <div class="photo">
+                            <a class="thumbnail" href="assets/images/Gallery/Sclad.jpg">
+                                <img style="width:320px; height:280px;"
+                                     src="assets/images/Gallery/Sclad.jpg">
+                                <span>Склад боєприпасів<img style="width: 800px; height: 800px;" src="assets/images/Gallery/Sclad.jpg"></span>
+                            </a>
+
+                            <div class="photo_text">Склад боєприпасів</div>
+                        </div>
+                    </div>
+                    <div class="gallery_item">
+                        <div class="photo">
+                            <a class="thumbnail" href="assets/images/Gallery/Sherengy.jpg">
+                                <img style="width:320px; height:280px;"
+                                     src="assets/images/Gallery/Sherengy.jpg">
+                                <span>Військові шеренги<img style="width: 800px; height: 800px;" src="assets/images/Gallery/Sherengy.jpg"></span>
+                            </a>
+
+                            <div class="photo_text">Військові шеренги</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="3">
+                    <div class="gallery_item">
+                        <div class="photo">
+                            <a class="thumbnail" href="assets/images/Gallery/Soldier.jpg">
+                                <img style="width:320px; height:280px;"
+                                     src="assets/images/Gallery/Soldier.jpg">
+                                <span>Солдат армії Червоної лінії<img style="width: 800px; height: 800px;" src="assets/images/Gallery/Soldier.jpg"></span>
+                            </a>
+
+                            <div class="photo_text">Солдат армії Червоної лінії</div>
+                        </div>
+                    </div>
+                    <div class="gallery_item">
+                        <div class="photo">
+                            <a class="thumbnail" href="assets/images/Gallery/Tribune.jpg">
+                                <img style="width:320px; height:280px;"
+                                     src="assets/images/Gallery/Tribune.jpg">
+                                <span>Трибуна Генерального Секретаря<img style="width: 800px; height: 800px;" src="assets/images/Gallery/Tribune.jpg"></span>
+                            </a>
+
+                            <div class="photo_text">Трибуна Генерального Секретаря</div>
+                        </div>
+                    </div>
+                    <div class="gallery_item">
+                        <div class="photo">
+                            <a class="thumbnail" href="assets/images/Gallery/Soldiers.jpg">
+                                <img style="width:320px; height:280px;"
+                                     src="assets/images/Gallery/Soldiers.jpg">
+                                <span>Пошиковані військові<img style="width: 800px; height: 800px;" src="assets/images/Gallery/Soldiers.jpg"></span>
+                            </a>
+
+                            <div class="photo_text">Пошиковані військові</div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>
