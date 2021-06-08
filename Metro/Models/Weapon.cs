@@ -8,7 +8,7 @@ namespace Metro.Models
 {
     public class Weapon
     {
-        public byte Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [StringLength(255)]

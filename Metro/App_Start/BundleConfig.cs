@@ -24,6 +24,7 @@ namespace Metro
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/roboto.css",
+                      "~/Content/bootstrap-lumen.css",
                       "~/Content/Site.css"));
         }
     }

@@ -1,0 +1,54 @@
+﻿@model Metro.ViewModels.HumanViewModel
+@{
+    ViewBag.Title = "Create Human";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="form-admin">
+
+    <div class="container body-content">
+
+        <h2>Створити запис</h2>
+
+        @using (Html.BeginForm("AddHuman", "Home"))
+        {
+            @Html.ValidationSummary(true, "Please fix the following errors")
+            <div class="form-group">
+                @Html.LabelFor(m => m.Human.FirstName)
+                @Html.TextBoxFor(m => m.Human.FirstName, new {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.Human.FirstName)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Human.LastName)
+                @Html.TextBoxFor(m => m.Human.LastName, new {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.Human.LastName)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Human.PositionId)
+                @Html.DropDownListFor(m => m.Human.PositionId, new SelectList(Model.Positions, "Id", "Name"), "", new {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.Human.PositionId)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Human.StationId)
+                @Html.DropDownListFor(m => m.Human.StationId, new SelectList(Model.Stations, "Id", "Name"), "", new {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.Human.StationId)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Human.WeaponId)
+                @Html.DropDownListFor(m => m.Human.WeaponId, new SelectList(Model.Weapons, "Id", "Name"), "", new {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.Human.WeaponId)
+            </div>
+            @Html.HiddenFor(m => m.Human.Id)
+            @Html.AntiForgeryToken()
+            <button type="submit" class="btn btn-primary">Save</button>
+        }
+
+    </div>
+</div>
+
+
+
+
+

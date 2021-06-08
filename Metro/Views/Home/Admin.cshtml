@@ -1,15 +1,33 @@
-﻿
+﻿@model Metro.ViewModels.HumanViewModel
 @{
     ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    @Styles.Render("~/Content/css")
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>Панель адміністратора</title>
-</head>
-<body>
+<div class="form-admin">
+
+    <div class="container body-content">
+
+        <div>
+            @Html.ActionLink("New Human", "CreateHuman", "Home", routeValues: null, htmlAttributes: new { @class = "btn btn-primary", @role = "button" })
+        </div>
+        
+        <div>
+            @Html.ActionLink("New Position", "CreatePosition", "Home", routeValues: null, htmlAttributes: new { @class = "btn btn-primary", @role = "button" })
+        </div>
+        
+        <div>
+            @Html.ActionLink("New Weapon", "CreateWeapon", "Home", routeValues: null, htmlAttributes: new { @class = "btn btn-primary", @role = "button" })
+        </div>
+        
+        <div>
+            @Html.ActionLink("New Station", "CreateStation", "Home", routeValues: null, htmlAttributes: new { @class = "btn btn-primary", @role = "button" })
+        </div>
+
+    </div>
+</div>
+
+
+
+
 

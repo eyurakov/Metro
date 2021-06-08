@@ -1,6 +1,33 @@
 ﻿<!DOCTYPE html>
+
 <html>
+<head>
+    <meta charset="UTF-8">
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Панель адміністратора</title>
+</head>
+
 <body>
-  @RenderBody()
+    <header class="header">
+        <div class="container">
+            <div class="header_inner">
+
+                <div class="header_logo">
+                    @Html.ActionLink("Метро 2033", "Index", "Home", new { area = "" }, new { @class = "nav_link" })
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+   
+        @RenderBody()
+        
+
+    @RenderSection("scripts", required: false)
 </body>
 </html>

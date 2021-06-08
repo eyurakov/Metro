@@ -1,0 +1,33 @@
+﻿@model Metro.Models.Weapon
+@{
+    ViewBag.Title = "CreateWeapon";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="form-admin">
+
+    <div class="container body-content">
+
+        <h2>Створити запис</h2>
+
+        @using (Html.BeginForm("AddWeapon", "Home"))
+        {
+            @Html.ValidationSummary(true, "Please fix the following errors")
+            <div class="form-group">
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Name)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Caliber)
+                @Html.TextBoxFor(m => m.Caliber, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Caliber)
+            </div>
+
+            @Html.HiddenFor(m => m.Id)
+            @Html.AntiForgeryToken()
+            <button type="submit" class="btn btn-primary">Save</button>
+        }
+
+    </div>
+</div>
