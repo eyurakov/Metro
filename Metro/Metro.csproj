@@ -303,6 +303,8 @@
     <Content Include="assets\images\Governance.jpg" />
     <Content Include="assets\images\Metro.jpg" />
     <Content Include="assets\images\Metro2.jpg" />
+    <Content Include="bin\Metro.dll" />
+    <Content Include="bin\Metro.pdb" />
     <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
