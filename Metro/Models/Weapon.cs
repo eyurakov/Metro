@@ -14,6 +14,6 @@ namespace Metro.Models
         [StringLength(255)]
         public string Name { get; set; }
 
-        public int Caliber { get; set; }
+        public double Caliber { get; set; }
     }
 }

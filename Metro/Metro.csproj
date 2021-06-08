@@ -263,9 +263,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20210607192247_createhuman.cs" />
-    <Compile Include="Migrations\20210607192247_createhuman.designer.cs">
-      <DependentUpon>20210607192247_createhuman.cs</DependentUpon>
+    <Compile Include="Migrations\20210608184441_addtables.cs" />
+    <Compile Include="Migrations\20210608184441_addtables.designer.cs">
+      <DependentUpon>20210608184441_addtables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210608184755_addtables1.cs" />
+    <Compile Include="Migrations\20210608184755_addtables1.designer.cs">
+      <DependentUpon>20210608184755_addtables1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210608191659_changecaliber.cs" />
+    <Compile Include="Migrations\20210608191659_changecaliber.designer.cs">
+      <DependentUpon>20210608191659_changecaliber.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\MetroContextModelSnapshot.cs" />
     <Compile Include="Models\DB\MetroContext.cs" />

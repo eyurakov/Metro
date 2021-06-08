@@ -2,7 +2,7 @@
 
 namespace Metro.Migrations
 {
-    public partial class createhuman : Migration
+    public partial class addtables : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -10,7 +10,8 @@ namespace Metro.Migrations
                 name: "Position",
                 columns: table => new
                 {
-                    Id = table.Column<byte>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(maxLength: 255, nullable: false)
                 },
                 constraints: table =>
@@ -36,7 +37,8 @@ namespace Metro.Migrations
                 name: "Weapon",
                 columns: table => new
                 {
-                    Id = table.Column<byte>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(maxLength: 255, nullable: false),
                     Caliber = table.Column<int>(nullable: false)
                 },
@@ -53,19 +55,21 @@ namespace Metro.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
+                    PositionId1 = table.Column<int>(nullable: true),
                     PositionId = table.Column<byte>(nullable: false),
                     StationId = table.Column<int>(nullable: false),
+                    WeaponId1 = table.Column<int>(nullable: true),
                     WeaponId = table.Column<byte>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Human", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Human_Position_PositionId",
-                        column: x => x.PositionId,
+                        name: "FK_Human_Position_PositionId1",
+                        column: x => x.PositionId1,
                         principalTable: "Position",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Human_Station_StationId",
                         column: x => x.StationId,
@@ -73,17 +77,17 @@ namespace Metro.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Human_Weapon_WeaponId",
-                        column: x => x.WeaponId,
+                        name: "FK_Human_Weapon_WeaponId1",
+                        column: x => x.WeaponId1,
                         principalTable: "Weapon",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Human_PositionId",
+                name: "IX_Human_PositionId1",
                 table: "Human",
-                column: "PositionId");
+                column: "PositionId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Human_StationId",
@@ -91,9 +95,9 @@ namespace Metro.Migrations
                 column: "StationId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Human_WeaponId",
+                name: "IX_Human_WeaponId1",
                 table: "Human",
-                column: "WeaponId");
+                column: "WeaponId1");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

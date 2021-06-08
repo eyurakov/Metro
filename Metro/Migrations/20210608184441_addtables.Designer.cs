@@ -4,14 +4,16 @@ using Metro.Models.DB;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Metro.Migrations
 {
     [DbContext(typeof(MetroContext))]
-    partial class MetroContextModelSnapshot : ModelSnapshot
+    [Migration("20210608184441_addtables")]
+    partial class addtables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -100,8 +102,8 @@ namespace Metro.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<double>("Caliber")
-                        .HasColumnType("float");
+                    b.Property<int>("Caliber")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
