@@ -260,11 +260,11 @@ th {
   }
   .table td,
   .table th {
-    background-color: #fff !important;
+    background-color: black !important;
   }
   .table-bordered th,
   .table-bordered td {
-    border: 1px solid #ddd !important;
+    border: 1px solid red !important;
   }
 }
 @font-face {
@@ -2297,7 +2297,7 @@ th {
   border-top: 2px solid #eeeeee;
 }
 .table .table {
-  background-color: #ffffff;
+  background-color: brown;
 }
 .table-condensed > thead > tr > th,
 .table-condensed > tbody > tr > th,
@@ -2308,7 +2308,7 @@ th {
   padding: 5px;
 }
 .table-bordered {
-  border: 1px solid #eeeeee;
+  border: 1px solid red;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
@@ -2316,17 +2316,17 @@ th {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #eeeeee;
+  border: 1px solid red;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
   border-bottom-width: 2px;
 }
 .table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #f9f9f9;
+  background-color: red;
 }
 .table-hover > tbody > tr:hover {
-  background-color: #f5f5f5;
+  background-color: red;
 }
 table col[class*="col-"] {
   position: static;
@@ -2351,14 +2351,14 @@ table th[class*="col-"] {
 .table > thead > tr.active > th,
 .table > tbody > tr.active > th,
 .table > tfoot > tr.active > th {
-  background-color: #f5f5f5;
+  background-color: black;
 }
 .table-hover > tbody > tr > td.active:hover,
 .table-hover > tbody > tr > th.active:hover,
 .table-hover > tbody > tr.active:hover > td,
 .table-hover > tbody > tr:hover > .active,
 .table-hover > tbody > tr.active:hover > th {
-  background-color: #e8e8e8;
+  background-color: black;
 }
 .table > thead > tr > td.success,
 .table > tbody > tr > td.success,
@@ -2454,7 +2454,7 @@ table th[class*="col-"] {
     margin-bottom: 15px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #eeeeee;
+    border: 1px solid black;
   }
   .table-responsive > .table {
     margin-bottom: 0;
@@ -6891,7 +6891,7 @@ table .danger,
 .table .danger,
 table .info,
 .table .info {
-  color: #fff;
+  color: red;
 }
 table .success a:not(.btn),
 .table .success a:not(.btn),
@@ -6901,7 +6901,7 @@ table .danger a:not(.btn),
 .table .danger a:not(.btn),
 table .info a:not(.btn),
 .table .info a:not(.btn) {
-  color: #fff;
+  color: red;
 }
 table:not(.table-bordered) > thead > tr > th,
 .table:not(.table-bordered) > thead > tr > th,

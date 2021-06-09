@@ -7,6 +7,7 @@ using System.Windows.Forms.VisualStyles;
 using Metro.Models;
 using Metro.Models.DB;
 using Metro.ViewModels;
+using System.Data.Entity;
 
 namespace Metro.Controllers
 {
@@ -26,7 +27,8 @@ namespace Metro.Controllers
 
         public ActionResult Government()
         {
-            return View();
+            var humans = _context.Human.Include(c => c.Position).ToList();
+            return View(humans);
         }
 
         public ActionResult Geography()

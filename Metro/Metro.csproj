@@ -258,8 +258,12 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\MappingProfile.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Api\HumansController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Dtos\HumanDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -274,6 +278,10 @@
     <Compile Include="Migrations\20210608191659_changecaliber.cs" />
     <Compile Include="Migrations\20210608191659_changecaliber.designer.cs">
       <DependentUpon>20210608191659_changecaliber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210608221050_changebd.cs" />
+    <Compile Include="Migrations\20210608221050_changebd.designer.cs">
+      <DependentUpon>20210608221050_changebd.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\MetroContextModelSnapshot.cs" />
     <Compile Include="Models\DB\MetroContext.cs" />

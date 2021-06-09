@@ -4,10 +4,11 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using Metro.Models;
 
-namespace Metro.Models
+namespace Metro.Dtos
 {
-    public class Human
+    public class HumanDto
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
@@ -15,7 +16,7 @@ namespace Metro.Models
         public Position Position { get; set; }
 
         [Display(Name = "Position")]
-        public int PositionId { get; set; }
+        public byte PositionId { get; set; }
 
         public Station Station { get; set; }
 
@@ -25,6 +26,6 @@ namespace Metro.Models
         public int StationId { get; set; }
         public Weapon Weapon { get; set; }
         [Display(Name = "Weapon")]
-        public int WeaponId { get; set; }
+        public byte WeaponId { get; set; }
     }
 }
