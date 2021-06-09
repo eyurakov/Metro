@@ -283,6 +283,14 @@
     <Compile Include="Migrations\20210608221050_changebd.designer.cs">
       <DependentUpon>20210608221050_changebd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20210609085931_foreignkey.cs" />
+    <Compile Include="Migrations\20210609085931_foreignkey.designer.cs">
+      <DependentUpon>20210609085931_foreignkey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20210609090926_foreignkey2.cs" />
+    <Compile Include="Migrations\20210609090926_foreignkey2.designer.cs">
+      <DependentUpon>20210609090926_foreignkey2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\MetroContextModelSnapshot.cs" />
     <Compile Include="Models\DB\MetroContext.cs" />
     <Compile Include="Models\Human.cs" />

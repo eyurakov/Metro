@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Metro.Models.Weapon>
 @{
     ViewBag.Title = "Army";
 }
@@ -77,3 +77,37 @@
         </div>
     </div>
 </section>
+
+
+<div class="form-admin">
+
+    <div class="container body-content">
+
+        <div class="container">
+            <div class="section_header">
+                <h2 class="section_title">Список зброї</h2>
+            </div>
+        </div>
+
+        <table id="humans" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Код</th>
+                    <th>Назва</th>
+                    <th>Калібр</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var weapon in Model)
+                {
+                    <tr>
+                        <td>@weapon.Id</td>
+                        <td>@weapon.Name</td>
+                        <td>@weapon.Caliber</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

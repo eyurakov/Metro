@@ -27,23 +27,31 @@ namespace Metro.Controllers
 
         public ActionResult Government()
         {
-            var humans = _context.Human.Include(c => c.Position).ToList();
+            var humans = _context.Human.Include(c => c.Weapon).ToList();
+
             return View(humans);
         }
 
         public ActionResult Geography()
         {
-            return View();
+            var stations = _context.Station.ToList();
+
+            return View(stations);
+
         }
 
         public ActionResult Economics()
         {
-            return View();
+            var positions = _context.Position.ToList();
+
+            return View(positions);
         }
 
         public ActionResult Army()
         {
-            return View();
+            var weapons = _context.Weapon.ToList();
+
+            return View(weapons);
         }
 
         public ActionResult CreateHuman()

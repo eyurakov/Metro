@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Metro.Models.Position>
 @{
     ViewBag.Title = "Economics";
 }
@@ -123,3 +123,32 @@
     </div>
 </section>
 
+<div class="form-admin">
+
+    <div class="container body-content">
+
+        <div class="container">
+            <div class="section_header">
+                <h2 class="section_title">Список посад</h2>
+            </div>
+        </div>
+
+        <table id="humans" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Код</th>
+                    <th>Назва</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var position in Model)
+                {
+                    <tr>
+                        <td>@position.Id</td>
+                        <td>@position.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

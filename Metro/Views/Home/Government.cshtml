@@ -70,7 +70,7 @@
 <div class="form-admin">
 
     <div class="container body-content">
-        
+
         <div class="container">
             <div class="section_header">
                 <h2 class="section_title">Список населення</h2>
@@ -79,25 +79,25 @@
 
         <table id="humans" class="table table-bordered table-hover">
             <thead>
-            <tr>
-                <th>Ім'я</th>
-                <th>Прізвище</th>
-                <th>Станція</th>
-                <th>Позиція</th>
-                <th>Зброя</th>
-            </tr>
+                <tr>
+                    <th>Ім'я</th>
+                    <th>Прізвище</th>
+                    <th>Станція</th>
+                    <th>Позиція</th>
+                    <th>Зброя</th>
+                </tr>
             </thead>
             <tbody>
-            @foreach (var human in Model)
-            {
-                <tr>
-                    <td>@human.FirstName</td>
-                    <td>@human.LastName</td>
-                    <td>@human.StationId</td>
-                    <td>@human.PositionId</td>
-                    <td>@human.WeaponId</td>
-                </tr>
-            }
+                @foreach (var human in Model)
+                {
+                    <tr>
+                        <td>@human.FirstName</td>
+                        <td>@human.LastName</td>
+                        <td>@human.StationId</td>
+                        <td>@human.PositionId</td>
+                        <td>@human.WeaponId</td>
+                    </tr>
+                }
             </tbody>
         </table>
     </div>

@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Metro.Models.Station>
 @{
     ViewBag.Title = "Geography";
 }
@@ -53,3 +53,38 @@
         </div>
     </div>
 </section>
+
+
+<div class="form-admin">
+
+    <div class="container body-content">
+
+        <div class="container">
+            <div class="section_header">
+                <h2 class="section_title">Список станцій</h2>
+            </div>
+        </div>
+
+        <table id="humans" class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>Код</th>
+                <th>Назва</th>
+                <th>Кількість населення</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var station in Model)
+            {
+                <tr>
+                    <td>@station.Id</td>
+                    <td>@station.Name</td>
+                    <td>@station.Population</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
